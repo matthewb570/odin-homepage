@@ -1,3 +1,58 @@
-div {
-    color: red;
+:root {
+    --about-card-image-height-width: 700px;
+    --box-shadow: 1px 1px 15px lightgray;
+}
+
+.about-card {
+    display: flex;
+    align-items: center;
+
+    padding: 100px;
+}
+
+.about-card .image {
+    width: var(--about-card-image-height-width);
+    position: relative;
+    box-shadow: var(--box-shadow);
+}
+
+.about-card img {
+    width: var(--about-card-image-height-width);
+    height: var(--about-card-image-height-width);
+    object-fit: cover;
+}
+
+.about-card h1 {
+    position: absolute;
+    bottom: 0;
+    color: white;
+    text-align: center;
+    width: 100%;
+    margin: 0 0 5px 0;
+    font-size: 4rem;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+
+    min-height: calc(var(--about-card-image-height-width) - 150px);
+    padding: 20px;
+    box-shadow: var(--box-shadow);
+}
+
+.details h2 {
+    font-size: 3rem;
+}
+
+.details .description {
+    flex: 1;
+    
+    font-size: 2rem;
+}
+
+.details .button-list {
+    display: flex;
+    justify-content: right;
+    gap: 10px;
 }
