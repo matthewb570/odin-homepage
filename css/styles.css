@@ -1,6 +1,29 @@
 :root {
     --about-card-image-height-width: 700px;
-    --box-shadow: 1px 1px 15px lightgray;
+    --box-shadow: 0 0 15px rgb(0 0 0 / 0.38);
+    --box-shadow-light: 0 0 20px rgb(0 0 0 / 0.15)
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    position: relative;
+    /* filter: drop-shadow(0 0 15px gray); */ /* TODO: See if there's a way to make this work */
+}
+
+header::before {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 100%);
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    background: rgb(0, 159, 199);
 }
 
 .about-card {
@@ -13,7 +36,7 @@
 .about-card .image {
     width: var(--about-card-image-height-width);
     position: relative;
-    box-shadow: var(--box-shadow);
+    box-shadow: var(--box-shadow-light);
 }
 
 .about-card img {
@@ -39,6 +62,7 @@
     min-height: calc(var(--about-card-image-height-width) - 150px);
     padding: 20px;
     box-shadow: var(--box-shadow);
+    background-color: white;
 }
 
 .details h2 {
