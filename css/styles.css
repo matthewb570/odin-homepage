@@ -1,7 +1,11 @@
 :root {
     --about-card-image-height-width: 700px;
     --box-shadow: 0 0 15px rgb(0 0 0 / 0.38);
-    --box-shadow-light: 0 0 20px rgb(0 0 0 / 0.15)
+    --box-shadow-light: 0 0 20px rgb(0 0 0 / 0.15);
+
+    --github-icon: url("../images/github.svg");
+    --linked-in-icon: url("../images/linked-in.svg");
+    --x-social-icon: url("../images/x-social.svg");
 }
 
 body {
@@ -80,5 +84,28 @@ header::before {
 .details .button-list {
     display: flex;
     justify-content: right;
-    gap: 10px;
+    gap: 25px;
+}
+
+a {
+    cursor: pointer;
+}
+
+.icon {
+    border: none;
+    box-sizing: border-box;
+    height: 50px;
+    width: 50px;
+}
+
+.icon.github {
+    background-image: var(--github-icon);
+}
+
+.icon.linked-in {
+    background-image: var(--linked-in-icon);
+}
+
+.icon.x-social {
+    background-image: var(--x-social-icon);
 }
