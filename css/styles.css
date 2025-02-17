@@ -6,6 +6,7 @@
     --github-icon: url("../images/github.svg");
     --linked-in-icon: url("../images/linked-in.svg");
     --x-social-icon: url("../images/x-social.svg");
+    --open-in-new-icon: url("../images/open-in-new.svg");
 }
 
 body {
@@ -59,7 +60,7 @@ header::before {
     font-size: 4rem;
 }
 
-.details {
+.about-card .details {
     display: flex;
     flex-direction: column;
 
@@ -70,21 +71,70 @@ header::before {
     background-color: white;
 }
 
-.details h2 {
+.about-card .details h2 {
     font-size: 3rem;
     margin: 0 0 30px 0;
 }
 
-.details .description {
+.about-card .details .description {
     flex: 1;
     
     font-size: 2rem;
 }
 
-.details .button-list {
+.about-card .details .button-list {
     display: flex;
     justify-content: right;
     gap: 25px;
+}
+
+.project-card {
+    max-width: 500px;
+    min-height: 600px;
+    box-shadow: var(--box-shadow);
+}
+
+.project-card .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: 350px;
+    background-color: green;
+}
+
+.image .placeholder-text {
+    font-size: 4rem;
+    color: white;
+    text-align: center;
+}
+
+.project-card .details {
+    padding: 25px;
+}
+
+.project-card .details .header {
+    display: flex;
+    
+    margin-bottom: 20px;
+}
+
+.project-card .details .header h3 {
+    flex: 1;
+    gap: 15px;
+
+    font-size: 2rem;
+    margin: 0;
+}
+
+.project-card .details .header .button-list {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.project-card .details .description {
+    font-size: 1.5rem;
 }
 
 a {
@@ -94,6 +144,11 @@ a {
 .icon {
     border: none;
     box-sizing: border-box;
+    height: 35px;
+    width: 35px;
+}
+
+.icon.large {
     height: 50px;
     width: 50px;
 }
@@ -108,4 +163,8 @@ a {
 
 .icon.x-social {
     background-image: var(--x-social-icon);
+}
+
+.icon.open-in-new {
+    background-image: var(--open-in-new-icon);
 }
