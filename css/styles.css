@@ -29,7 +29,7 @@ header::before {
     bottom: 0;
     right: 0;
     z-index: -1;
-    background: rgb(0, 159, 199);
+    background: rgb(8, 145, 178);
 }
 
 .about-card {
@@ -116,7 +116,30 @@ main section h2 {
     align-items: center;
     
     height: 400px;
-    background-color: green;
+}
+
+.project-card:first-child .image {
+    background-color: rgb(158, 28, 28);
+}
+
+.project-card:nth-child(2) .image {
+    background-color: rgb(124, 117, 202);
+}
+
+.project-card:nth-child(3) .image {
+    background-color: rgb(94, 143, 77);
+}
+
+.project-card:nth-child(4) .image {
+    background-color: rgb(195, 99, 180);
+}
+
+.project-card:nth-child(5) .image {
+    background-color: rgb(216, 143, 57);
+}
+
+.project-card:last-child .image {
+    background-color: rgb(75, 162, 210);
 }
 
 .image .placeholder-text {
