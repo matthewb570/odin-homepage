@@ -205,6 +205,10 @@ footer .content-block {
     margin-bottom: 20px;
 }
 
+footer .icon-with-text .icon {
+    background-color: white;
+}
+
 a {
     cursor: pointer;
 }
@@ -214,6 +218,9 @@ a {
     box-sizing: border-box;
     height: 35px;
     width: 35px;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: black;
 }
 
 .icon.large {
@@ -222,25 +229,25 @@ a {
 }
 
 .icon.github {
-    background-image: var(--github-icon);
+    mask-image: var(--github-icon);
 }
 
 .icon.linked-in {
-    background-image: var(--linked-in-icon);
+    mask-image: var(--linked-in-icon);
 }
 
 .icon.x-social {
-    background-image: var(--x-social-icon);
+    mask-image: var(--x-social-icon);
 }
 
 .icon.open-in-new {
-    background-image: var(--open-in-new-icon);
+    mask-image: var(--open-in-new-icon);
 }
 
 .icon.phone {
-    background-image: var(--phone-icon);
+    mask-image: var(--phone-icon);
 }
 
 .icon.email {
-    background-image: var(--email-icon);
+    mask-image: var(--email-icon);
 }
