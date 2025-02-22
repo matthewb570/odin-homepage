@@ -1,3 +1,5 @@
+@import url(https://fonts.bunny.net/css?family=playfair-display:400|roboto:400);
+
 :root {
     --header-footer-background-color: rgb(8, 145, 178);
     
@@ -10,17 +12,28 @@
     --box-shadow: 0 0 15px rgb(0 0 0 / 0.38);
     --box-shadow-light: 0 0 20px rgb(0 0 0 / 0.15);
 
+    --text-shadow: 0 5px 5px rgb(0 0 0 / 0.38);
+
     --github-icon: url("../images/github.svg");
     --linked-in-icon: url("../images/linked-in.svg");
     --x-social-icon: url("../images/x-social.svg");
     --open-in-new-icon: url("../images/open-in-new.svg");
     --phone-icon: url("../images/phone.svg");
     --email-icon: url("../images/email.svg");
+
+    --accent-font-color: rgb(87, 86, 85);
+
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
     padding: 0;
     margin: 0;
+}
+
+h1, h2, h3 {
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
 }
 
 header {
@@ -68,7 +81,8 @@ header::before {
     text-align: center;
     width: 100%;
     margin: 0 0 5px 0;
-    font-size: 4rem;
+    font-size: 6rem;
+    text-shadow: var(--text-shadow);
 }
 
 .about-card .details {
@@ -85,7 +99,7 @@ header::before {
 .about-card .details h2,
 main section h2,
 footer h2 {
-    font-size: 3rem;
+    font-size: 4rem;
     margin: 0 0 30px 0;
 }
 
@@ -93,6 +107,8 @@ footer h2 {
     flex: 1;
     
     font-size: 2rem;
+    color: var(--accent-font-color);
+    line-height: 1.5;
 }
 
 .about-card .details .button-list {
@@ -163,6 +179,7 @@ main section h2 {
     color: white;
     text-align: center;
     padding: 20px;
+    font-family: "Playfair Display", serif;
 }
 
 .project-card .details {
@@ -191,6 +208,7 @@ main section h2 {
 
 .project-card .details .description {
     font-size: 1.5rem;
+    color: var(--accent-font-color);
 }
 
 footer {
