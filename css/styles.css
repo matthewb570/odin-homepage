@@ -3,6 +3,10 @@
     
     --about-card-image-width: 700px;
     --about-card-image-height: 800px;
+    
+    --contact-card-image-width: 1000px;
+    --contact-card-image-height: 700px;
+
     --box-shadow: 0 0 15px rgb(0 0 0 / 0.38);
     --box-shadow-light: 0 0 20px rgb(0 0 0 / 0.15);
 
@@ -209,6 +213,17 @@ footer .content-block {
 
 footer .icon-with-text .icon {
     background-color: white;
+}
+
+footer {
+    display: flex;
+    gap: 50px;
+}
+
+footer img {
+    height: var(--contact-card-image-height);
+    width: var(--contact-card-image-width);
+    object-fit: cover;
 }
 
 a {
