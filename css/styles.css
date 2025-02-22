@@ -1,7 +1,8 @@
 :root {
     --header-footer-background-color: rgb(8, 145, 178);
     
-    --about-card-image-height-width: 700px;
+    --about-card-image-width: 700px;
+    --about-card-image-height: 800px;
     --box-shadow: 0 0 15px rgb(0 0 0 / 0.38);
     --box-shadow-light: 0 0 20px rgb(0 0 0 / 0.15);
 
@@ -44,14 +45,15 @@ header::before {
 }
 
 .about-card .image {
-    width: var(--about-card-image-height-width);
+    width: var(--about-card-image-width);
+    height: var(--about-card-image-height);
     position: relative;
     box-shadow: var(--box-shadow-light);
 }
 
 .about-card img {
-    width: var(--about-card-image-height-width);
-    height: var(--about-card-image-height-width);
+    width: var(--about-card-image-width);
+    height: var(--about-card-image-height);
     object-fit: cover;
 }
 
@@ -69,7 +71,7 @@ header::before {
     display: flex;
     flex-direction: column;
 
-    min-height: calc(var(--about-card-image-height-width) - 150px);
+    min-height: calc(var(--about-card-image-height) - 200px);
     box-sizing: border-box;
     padding: 60px;
     box-shadow: var(--box-shadow);
