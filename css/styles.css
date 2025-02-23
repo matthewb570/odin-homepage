@@ -23,6 +23,8 @@
 
     --accent-font-color: rgb(87, 86, 85);
 
+    --border-padding-small: 20px;
+
     font-family: 'Roboto', sans-serif;
 }
 
@@ -62,8 +64,6 @@ header::before {
 }
 
 .about-card .image {
-    width: var(--about-card-image-width);
-    height: var(--about-card-image-height);
     position: relative;
     box-shadow: var(--box-shadow-light);
 }
@@ -72,6 +72,7 @@ header::before {
     width: var(--about-card-image-width);
     height: var(--about-card-image-height);
     object-fit: cover;
+    display: block;
 }
 
 .about-card h1 {
@@ -109,6 +110,7 @@ footer h2 {
     font-size: 2rem;
     color: var(--accent-font-color);
     line-height: 1.5;
+    margin-bottom: 30px;
 }
 
 .about-card .details .button-list {
@@ -289,4 +291,94 @@ a {
 
 .icon.email {
     mask-image: var(--email-icon);
+}
+
+@media (max-width: 500px) {
+    header::before {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 18%, 0% 36%);
+    }
+    
+    .about-card {
+        display: block;
+
+        padding: var(--border-padding-small);
+    }
+    
+    .about-card h1 {
+        text-align: left;
+        font-size: 5rem;
+        left: 5px;
+    }
+
+    .about-card .image {
+        box-shadow: var(--box-shadow);
+        margin-bottom: 100px;
+    }
+
+    .about-card img {
+        width: calc(100vw - 2 * var(--border-padding-small));
+        height: 75vh;
+    }
+
+    .about-card .details {
+        box-shadow: unset;
+        padding: 0;
+    }
+
+    .about-card .details h2,
+    main section h2,
+    footer h2 {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .about-card .details .button-list,
+    footer .button-list {
+        justify-content: center;
+    }
+
+    main {
+        padding-top: var(--border-padding-small);
+        padding-left: var(--border-padding-small);
+        padding-right: var(--border-padding-small);
+    }
+
+    .card-list {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card .image .placeholder-text {
+        font-size: 3rem;
+    }
+
+    .project-card .details .header h3 {
+        font-size: 1.75rem;
+    }
+
+    .icon {
+        height: 30px;
+        width: 30px;
+    }
+
+    footer {
+        display: block;
+        padding: 0;
+    }
+
+    footer .contact-card {
+        padding: var(--border-padding-small);
+    }
+
+    footer .content-block {
+        font-size: 1.15rem;
+    }
+
+    footer .icon-with-text .icon{
+        display: none;
+    }
+
+    footer img {
+        width: 100vw;
+        height: 75vh;
+    }
 }
