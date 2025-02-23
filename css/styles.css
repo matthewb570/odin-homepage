@@ -64,13 +64,16 @@ header::before {
 }
 
 .about-card .image {
+    flex: 1;
     position: relative;
     box-shadow: var(--box-shadow-light);
+    width: var(--about-card-image-width);
+    height: var(--about-card-image-height);
 }
 
 .about-card img {
-    width: var(--about-card-image-width);
-    height: var(--about-card-image-height);
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     display: block;
 }
@@ -87,6 +90,8 @@ header::before {
 }
 
 .about-card .details {
+    flex: 1;
+
     display: flex;
     flex-direction: column;
 
@@ -214,8 +219,15 @@ main section h2 {
 }
 
 footer {
+    display: flex;
+    gap: 50px;
+    
     background-color: var(--header-footer-background-color);
     color: white;
+}
+
+footer .contact-card {
+    flex: 1;
 }
 
 footer .button-list {
@@ -239,14 +251,10 @@ footer .icon-with-text .icon {
     background-color: white;
 }
 
-footer {
-    display: flex;
-    gap: 50px;
-}
-
 footer img {
+    flex: 0 1 var(--contact-card-image-width);
+    min-width: 500px;
     height: var(--contact-card-image-height);
-    width: var(--contact-card-image-width);
     object-fit: cover;
 }
 
@@ -293,7 +301,13 @@ a {
     mask-image: var(--email-icon);
 }
 
-@media (max-width: 500px) {
+@media (max-width: 1200px) {
+    h2 {
+        color: red;
+    }
+}
+
+@media (max-width: 600px) {
     header::before {
         clip-path: polygon(0% 0%, 100% 0%, 100% 18%, 0% 36%);
     }
@@ -311,13 +325,13 @@ a {
     }
 
     .about-card .image {
+        width: calc(100vw - 2 * var(--border-padding-small));
+        height: 75vh;
         box-shadow: var(--box-shadow);
         margin-bottom: 100px;
     }
 
     .about-card img {
-        width: calc(100vw - 2 * var(--border-padding-small));
-        height: 75vh;
     }
 
     .about-card .details {
