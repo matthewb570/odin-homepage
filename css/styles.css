@@ -300,7 +300,7 @@ a {
     mask-image: var(--email-icon);
 }
 
-@media (max-width: 1200px) and (min-width: 766px) {
+@media (max-width: 1200px) and (min-width: 765.1px) {
     .about-card {
         display: block;
         padding-top: 150px;
