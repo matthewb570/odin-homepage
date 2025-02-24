@@ -95,7 +95,6 @@ header::before {
     display: flex;
     flex-direction: column;
 
-    min-height: calc(var(--about-card-image-height) - 200px);
     box-sizing: border-box;
     padding: 60px;
     box-shadow: var(--box-shadow);
@@ -387,6 +386,7 @@ a {
 
     .card-list {
         grid-template-columns: 1fr;
+        justify-items: center;
     }
 
     .project-card .image .placeholder-text {
@@ -413,10 +413,19 @@ a {
 
     footer .content-block {
         font-size: 1.15rem;
+        margin-bottom: 30px;
+    }
+
+    footer .content-block:first-child {
+        font-size: 1.5rem;
     }
 
     footer .icon-with-text .icon{
         display: none;
+    }
+
+    footer .icon-with-text {
+        margin-bottom: 0px;
     }
 
     footer img {
