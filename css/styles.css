@@ -253,7 +253,7 @@ footer .icon-with-text .icon {
 
 footer img {
     flex: 0 1 var(--contact-card-image-width);
-    min-width: 500px;
+    min-width: 150px;
     height: var(--contact-card-image-height);
     object-fit: cover;
 }
@@ -331,6 +331,10 @@ a {
 
     .about-card .details h2 {
         text-align: center;
+    }
+
+    footer {
+        padding: 25px;
     }
 }
 
